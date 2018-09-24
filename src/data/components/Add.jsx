@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from "react-router-dom";
 
 class Add extends Component {
     constructor(props) {
@@ -23,6 +24,7 @@ class Add extends Component {
     }
 
     render() {
+        let { players, tournament } = this.props;
         return (
             <Fragment>
                 <div>
@@ -30,6 +32,7 @@ class Add extends Component {
                     <input id="player-name" type="text" value={ this.state.inputValue } onChange={ (e) => this.handleChange(e) } />
                     <button onClick={ this.handleClick }>Add</button>
                 </div>
+                <Link to="/">Back</Link>
             </Fragment>
         )
     }

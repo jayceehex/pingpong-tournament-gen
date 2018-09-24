@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import Add from '../components/Add';
-import { setName } from '../actions/state';
+import Home from '../components/Home';
+import { setTournament } from '../actions/state';
 
 const mapStateToProps = (state) => {
     return {
@@ -11,8 +11,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onClick: (name) => dispatch(setName(name))
+        onClick: () => dispatch(setTournament())
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Add);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

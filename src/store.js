@@ -4,7 +4,8 @@ import reducer from "./reducer";
 const initial = {
     players: {},
     tournament: {
-        numberOfBrackets: 0
+        noOfPlaces: 1,
+        noOfBrackets: 0
     }
 };
 
