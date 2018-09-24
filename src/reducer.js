@@ -1,4 +1,5 @@
 const setPlayerName = (state, name) => {
+    // Create copy of state and add player
     let newState = {
         ...state,
         players: {
@@ -10,24 +11,34 @@ const setPlayerName = (state, name) => {
             }
         }
     };
-    'use strict';
-    let shuffle = require('knuth-shuffle').knuthShuffle;
-    let shuffledPlayers = shuffle(Object.values(newState.players).slice(0));
-    console.log(shuffledPlayers);
+    // Return the new state
     return newState;
 }
 
-const setTournamentStructure = (state) => {
+const shufflePlayers = (state) => {
+    // Copy values of players object in state to array
+    let players = Object.values(state.players).slice(0);
+    // Shuffle players array using Fisher-Yates Shuffle
+    let shuffle = require('knuth-shuffle').knuthShuffle;
+    let shuffledPlayers = shuffle(players);
+    // Return shuffled players array
+    return shuffledPlayers;
+}
+
+const setTournamentStructure = state => {
+    // Create copy of state
     let newState = {
         ...state,
         tournament: {
             ...state.tournament,
         }
     }
+    // Calculate minimum no. of places and brackets for no. of players
     while (newState.tournament.noOfPlaces < Object.values(state.players).length) {
         newState.tournament.noOfPlaces = newState.tournament.noOfPlaces * 2;
         newState.tournament.noOfBrackets = newState.tournament.noOfBrackets + 1;
     }
+    // Set new state
     return newState;
 }
 
