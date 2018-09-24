@@ -5,7 +5,7 @@ const setPlayerName = (state, name) => {
         players: {
             ...state.players,
             [Object.values(state.players).length + 1]: {
-                tournamentId: Object.values(state.players).length + 1,
+                playerId: Object.values(state.players).length + 1,
                 name: name,
                 wins: 0
             }
@@ -25,12 +25,50 @@ const shufflePlayers = (state) => {
     return shuffledPlayers;
 }
 
-const setTournamentStructure = state => {
-    // Create copy of state
+const setMatches = state => {
+    // Calculate no. of matches in current bracket
+    let noOfMatches = Math.floor(state.tournament.currentBracket.playerIds.length / 2);
+    // Copy state and set no. of matches
     let newState = {
         ...state,
         tournament: {
             ...state.tournament,
+            currentBracket: {
+                ...state.tournament.currentBracket,
+                noOfMatches: noOfMatches,
+            }
+        }
+    }
+    return newState;
+}
+
+const setPlayersInBracket = state => {
+    // Copy state and set player IDs in bracket
+    let newState = {
+        ...state,
+        tournament: {
+            ...state.tournament,
+            currentBracket: {
+                ...state.tournament.currentBracket,
+                playerIds: [
+                    ...Object.keys(state.players)
+                ]
+            }
+        }
+    }
+    return setMatches(newState);
+}
+
+const setTournamentStructure = state => {
+    // Create copy of state, setting bracket to 1
+    let newState = {
+        ...state,
+        tournament: {
+            ...state.tournament,
+            currentBracket: {
+                ...state.tournament.currentBracket,
+                bracketId: 1,
+            }
         }
     }
     // Calculate minimum no. of places and brackets for no. of players
@@ -39,7 +77,7 @@ const setTournamentStructure = state => {
         newState.tournament.noOfBrackets = newState.tournament.noOfBrackets + 1;
     }
     // Set new state
-    return newState;
+    return setPlayersInBracket(newState);
 }
 
 const reducer = (state, action) => {

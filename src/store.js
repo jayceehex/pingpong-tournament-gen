@@ -5,7 +5,12 @@ const initial = {
     players: {},
     tournament: {
         noOfPlaces: 1,
-        noOfBrackets: 0
+        noOfBrackets: 0,
+        currentBracket: {
+            bracketId: 0,
+            playerIds: [],
+            noOfMatches: 0
+        }
     }
 };
 
