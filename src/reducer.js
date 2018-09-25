@@ -1,3 +1,13 @@
+function createReducer(initialState, handlers) {
+    return function reducer(state = initialState, action) {
+      if (handlers.hasOwnProperty(action.type)) {
+        return handlers[action.type](state, action)
+      } else {
+        return state
+      }
+    }
+}
+
 const setPlayerName = (state, name) => {
     // Create copy of state and add player
     let newState = {
@@ -56,8 +66,13 @@ const setPlayersInBracket = state => {
             }
         }
     }
-    return setMatches(newState);
+    return newState;
 }
+
+const bracketReducer = createReducer([], {
+    'calculatePlayers': setPlayersInBracket,
+    'calculateMatches': setMatches
+})
 
 const setTournamentStructure = state => {
     // Create copy of state, setting bracket to 1
@@ -77,7 +92,7 @@ const setTournamentStructure = state => {
         newState.tournament.noOfBrackets = newState.tournament.noOfBrackets + 1;
     }
     // Set new state
-    return setPlayersInBracket(newState);
+    return newState;
 }
 
 const reducer = (state, action) => {
