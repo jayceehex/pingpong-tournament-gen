@@ -9,7 +9,8 @@ const initial = {
         currentBracket: {
             bracketId: 0,
             playerIds: [],
-            noOfMatches: 0
+            noOfMatches: 0,
+            matches: {}
         }
     }
 };

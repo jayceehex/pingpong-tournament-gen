@@ -69,10 +69,47 @@ const setPlayersInBracket = state => {
     return newState;
 }
 
-const bracketReducer = createReducer([], {
-    'calculatePlayers': setPlayersInBracket,
-    'calculateMatches': setMatches
-})
+const setPlayerMatches = state => {
+    // Shuffle players into array
+    let shuffledPlayers = shufflePlayers(state);
+    console.log(shuffledPlayers);
+    // Create array of length = noOfMatches
+    let matches = shuffledPlayers.slice(0, state.tournament.currentBracket.noOfMatches);
+    console.log(matches);
+    // Create object of match objects
+    let matchesObj = matches.reduce((acc, cur, idx) => {
+        return {
+            ...acc,
+            [idx]: {
+                player1: {
+                    id: shuffledPlayers.length ? shuffledPlayers.pop().playerId : null,
+                    score: null,
+                },
+                player2: {
+                    id: shuffledPlayers.length ? shuffledPlayers.pop().playerId : null,
+                    score: null,
+                },
+            }
+        }
+    }, {})
+    // Insert object into state
+    let newState = {
+        ...state,
+        tournament: {
+            ...state.tournament,
+            currentBracket: {
+                ...state.tournament.currentBracket,
+                matches: matchesObj
+            }
+        }
+    }
+    return newState;
+}
+
+// const bracketReducer = createReducer([], {
+//     'calculatePlayers': setPlayersInBracket,
+//     'calculateMatches': setMatches
+// })
 
 const setTournamentStructure = state => {
     // Create copy of state, setting bracket to 1
@@ -91,8 +128,13 @@ const setTournamentStructure = state => {
         newState.tournament.noOfPlaces = newState.tournament.noOfPlaces * 2;
         newState.tournament.noOfBrackets = newState.tournament.noOfBrackets + 1;
     }
+    // Set players in bracket
+    let newStateWithPlayers = setPlayersInBracket(newState);
+    // Calculate no. of matches in bracket
+    let newStateWithMatches = setMatches(newStateWithPlayers);
+    let newStateWithPlayerMatches = setPlayerMatches(newStateWithMatches);
     // Set new state
-    return newState;
+    return newStateWithPlayerMatches;
 }
 
 const reducer = (state, action) => {

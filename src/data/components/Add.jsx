@@ -24,7 +24,6 @@ class Add extends Component {
     }
 
     render() {
-        let { players, tournament } = this.props;
         return (
             <Fragment>
                 <div>
