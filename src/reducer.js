@@ -70,7 +70,7 @@ const setPlayersInBracket = state => {
 }
 
 const setPlayerMatches = state => {
-    // Shuffle players into array
+    // Shuffle player objects into array
     let shuffledPlayers = shufflePlayers(state);
     // Create array of length = noOfMatches
     let matchesForPlayers = shuffledPlayers.slice(0, state.tournament.currentBracket.noOfMatches);
@@ -91,14 +91,17 @@ const setPlayerMatches = state => {
             }
         }
     }, {})
-    // Insert object into state
+    // What remains in shuffledPlayers are byes (passed into next bracket without contest)
+    let byes = shuffledPlayers.map(player => player.playerId);
+    // Insert match list object and byes array into state
     let newState = {
         ...state,
         tournament: {
             ...state.tournament,
             currentBracket: {
                 ...state.tournament.currentBracket,
-                matches: matches
+                matches: matches,
+                byes: byes,
             }
         }
     }
