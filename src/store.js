@@ -11,7 +11,8 @@ const initial = {
             playerIds: [],
             noOfMatches: 0,
             matches: {}
-        }
+        },
+        pastBrackets: {}
     }
 };
 

@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from "react-router-dom";
+import PlayerList from './PlayerList';
+
 
 class Add extends Component {
     constructor(props) {
@@ -24,8 +26,10 @@ class Add extends Component {
     }
 
     render() {
+        let { players, tournament } = this.props;
         return (
             <Fragment>
+                <PlayerList players={players} tournament={tournament}/>
                 <div>
                     <label htmlFor="player-name">Player Name</label>
                     <input id="player-name" type="text" value={ this.state.inputValue } onChange={ (e) => this.handleChange(e) } />

@@ -72,15 +72,14 @@ const setPlayersInBracket = state => {
 const setPlayerMatches = state => {
     // Shuffle players into array
     let shuffledPlayers = shufflePlayers(state);
-    console.log(shuffledPlayers);
     // Create array of length = noOfMatches
-    let matches = shuffledPlayers.slice(0, state.tournament.currentBracket.noOfMatches);
-    console.log(matches);
+    let matchesForPlayers = shuffledPlayers.slice(0, state.tournament.currentBracket.noOfMatches);
     // Create object of match objects
-    let matchesObj = matches.reduce((acc, cur, idx) => {
+    let matches = matchesForPlayers.reduce((acc, cur, idx) => {
         return {
             ...acc,
-            [idx]: {
+            [idx + 1]: {
+                matchId: idx + 1,
                 player1: {
                     id: shuffledPlayers.length ? shuffledPlayers.pop().playerId : null,
                     score: null,
@@ -99,7 +98,7 @@ const setPlayerMatches = state => {
             ...state.tournament,
             currentBracket: {
                 ...state.tournament.currentBracket,
-                matches: matchesObj
+                matches: matches
             }
         }
     }

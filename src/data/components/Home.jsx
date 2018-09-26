@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from "react-router-dom";
-import PlayerList from './PlayerList';
+import TournamentList from './TournamentList';
 
 class Home extends Component {
     constructor(props) {
@@ -16,7 +16,7 @@ class Home extends Component {
         let { players, tournament } = this.props;
         return (
             <Fragment>
-                <PlayerList players={players} tournament={tournament}/>
+                <TournamentList players={players} tournament={tournament}/>
                 <Link to="/add">Add</Link>
                 <button onClick={ this.handleClick }>Generate</button>
             </Fragment>

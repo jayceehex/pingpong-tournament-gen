@@ -7,9 +7,17 @@ class TournamentList extends Component {
     }
 
     render() {
+        let { players, tournament } = this.props;
         return (
             <Fragment>
-                
+                { Object.values(tournament.currentBracket.matches).map(match => {
+                    return (
+                        <div key={match.matchId}>
+                            <div>{ players[match.player1.id].name }</div>
+                            <div>{ players[match.player2.id].name }</div>
+                        </div>
+                    )
+                }) }
             </Fragment>
         )
     }
