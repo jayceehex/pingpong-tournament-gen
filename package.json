@@ -10,6 +10,7 @@
     "gulp-watch-sass": "^1.4.1",
     "knuth-shuffle": "^1.0.8",
     "node-sass": "^4.9.3",
+    "normalize.css": "^8.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
@@ -23,5 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1"
   }
 }

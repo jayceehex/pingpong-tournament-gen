@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import PlayerList from './PlayerList';
 import IconButton from './IconButton';
 
-
 class Add extends Component {
     constructor(props) {
         super(props);

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const PlayerList = ({ players, tournament }) => {
     return (
-        <Fragment>
+        <div className="textbox offwhite-bg">
             { Object.values(players).length ? (
                 Object.values(players).map((player, i) => {
                 return (
@@ -14,7 +14,7 @@ const PlayerList = ({ players, tournament }) => {
             })) : (
                 <p>No players yet. :(</p>
             ) }
-        </Fragment>
+        </div>
     )
 }
 

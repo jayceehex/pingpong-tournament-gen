@@ -17,8 +17,10 @@ class Home extends Component {
         return (
             <Fragment>
                 <TournamentList players={players} tournament={tournament}/>
-                <Link className="button" to="/add">Add</Link>
-                <button className="button" onClick={ this.handleClick }>Generate</button>
+                <div className="button-container">
+                    <Link className="button" to="/add">Add</Link>
+                    <button className="button" onClick={ this.handleClick }>Generate</button>
+                </div>
             </Fragment>
         )
     }

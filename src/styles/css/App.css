@@ -1,11 +1,64 @@
+@import url(../../../node_modules/normalize.css/normalize.css);
+body {
+  background-color: #21618c;
+  color: #1b2631; }
+
 .button {
+  box-sizing: border-box;
   height: 2rem;
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   margin: 1rem;
   border: 0px;
   font-size: 1em;
-  text-decoration: none;
-  color: #333; }
+  text-decoration: none; }
 
 p {
   font-size: 1em; }
+
+.textbox {
+  margin: 0.5rem 1rem;
+  padding: 1.5rem;
+  text-align: center; }
+
+.bracketbox {
+  padding: 1.5rem 3rem;
+  display: flex;
+  flex-direction: column; }
+
+.matchbox {
+  margin: 0.5rem 0; }
+
+.playerbox {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem; }
+
+.container {
+  margin: 0 30%; }
+
+.button-container {
+  display: flex;
+  justify-content: space-between; }
+
+.light-text {
+  color: #fbfcfc; }
+
+.dark-text {
+  color: #1b2631; }
+
+.midblue-bg {
+  background-color: #21618c; }
+
+.darkblue-bg {
+  background-color: #34495e; }
+
+.lightblue-bg {
+  background-color: #3498db; }
+
+.offwhite-bg {
+  background-color: #fbfcfc; }
+
+.offblack-bg {
+  background-color: #1b2631; }
+
+.red-bg {
+  background-color: #ec4f3f; }
