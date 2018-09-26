@@ -91,7 +91,7 @@ const setPlayerMatches = state => {
             }
         }
     }, {})
-    // What remains in shuffledPlayers are byes (passed into next bracket without contest)
+    // What remains in shuffledPlayers are byes (odds passed into next bracket without contest)
     let byes = shuffledPlayers.map(player => player.playerId);
     // Insert match list object and byes array into state
     let newState = {

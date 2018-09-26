@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from "react-router-dom";
 import PlayerList from './PlayerList';
+import IconButton from './IconButton';
 
 
 class Add extends Component {
@@ -35,7 +35,7 @@ class Add extends Component {
                     <input id="player-name" type="text" value={ this.state.inputValue } onChange={ (e) => this.handleChange(e) } />
                     <button onClick={ this.handleClick }>Add</button>
                 </div>
-                <Link to="/">Back</Link>
+                <IconButton target="/" />
             </Fragment>
         )
     }

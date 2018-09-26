@@ -4,7 +4,10 @@
   "private": true,
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-watch-sass": "^1.4.1",
     "knuth-shuffle": "^1.0.8",
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
