@@ -3,6 +3,7 @@ import React from 'react';
 const PlayerList = ({ players, tournament }) => {
     return (
         <div className="bracketbox light-text">
+        <h2>Players</h2>
             { Object.values(players).length ? (
                 Object.values(players).map((player, i) => {
                 return (

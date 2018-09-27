@@ -3,15 +3,27 @@ body {
   background-color: #21618c;
   color: #fbfcfc; }
 
-.button, .highlight-button, .standard-button {
-  display: inline-block;
+.button, .standard-button, .highlight-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
-  padding: 1rem 2rem;
-  margin: 1rem;
+  padding: 0.75rem 2rem;
+  margin: 0 1rem;
+  width: 100%;
   border: 0px;
   font-size: 1em;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  line-height: 2rem; }
+  .button:first-child, .standard-button:first-child, .highlight-button:first-child {
+    margin-left: 0; }
+  .button:last-child, .standard-button:last-child, .highlight-button:last-child {
+    margin-right: 0; }
+  .button:only-child, .standard-button:only-child, .highlight-button:only-child {
+    margin: 0; }
+  .button span, .standard-button span, .highlight-button span, .button svg, .standard-button svg, .highlight-button svg {
+    margin: 0 0.75rem; }
 
 .round-button {
   display: inline-flex;
@@ -20,7 +32,7 @@ body {
   font-size: 2em;
   width: 30px;
   height: 30px;
-  padding: 1rem;
+  padding: 1rem 1rem;
   border-radius: 50%;
   background-color: #ec4f3f; }
 
@@ -33,8 +45,8 @@ p {
   text-align: center; }
 
 .bracketbox {
-  margin: 2rem 0;
-  padding: 1.5rem 0;
+  margin: 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column; }
 
@@ -45,7 +57,7 @@ p {
 
 .playerbox {
   margin: 1rem 0;
-  padding: 0.5rem 1rem; }
+  padding: 1rem 1rem; }
   .playerbox p {
     margin: 0; }
 
@@ -54,14 +66,21 @@ p {
 
 .button-container {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 1rem 0; }
+
+input {
+  border: 0px; }
+  input[type=text] {
+    padding: 1rem 0.5rem; }
 
 label {
-  display: inline-block; }
-
-input[type=text] {
   display: inline-block;
-  padding: 0.75rem 2rem; }
+  padding: 1rem 0; }
+
+.form {
+  display: flex;
+  flex-direction: column; }
 
 .light-text {
   color: #fbfcfc; }
@@ -90,10 +109,16 @@ input[type=text] {
 .red-bg {
   background-color: #ec4f3f; }
 
-.highlight-button {
-  background-color: #ec4f3f;
-  color: #fbfcfc; }
-
 .standard-button {
   background-color: #fbfcfc;
   color: #1b2631; }
+  .standard-button:disabled {
+    background-color: #dee6e6;
+    color: #2d4052; }
+
+.highlight-button {
+  background-color: #ec4f3f;
+  color: #fbfcfc; }
+  .highlight-button:disabled {
+    background-color: #f17a6d;
+    color: #dee6e6; }

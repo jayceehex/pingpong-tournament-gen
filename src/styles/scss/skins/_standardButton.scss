@@ -2,4 +2,8 @@
     @extend .button;
     background-color: $offwhite;
     color: $offblack;
+    &:disabled {
+        background-color: darken($offwhite, 10%);
+        color: lighten($offblack, 10%);
+    }
 }

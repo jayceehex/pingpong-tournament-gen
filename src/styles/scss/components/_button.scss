@@ -1,12 +1,28 @@
 .button {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    padding: 1rem 2rem;
-    margin: 1rem;
+    padding: 0.75rem 2rem;
+    margin: 0 1rem;
+    width: 100%;
     border: 0px;
     font-size: 1em;
     text-decoration: none;
     text-align: center;
+    line-height: 2rem;
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    &:only-child {
+        margin: 0;
+    }
+    span, svg {
+        margin: 0 0.75rem;
+    }
 }
 
 .round-button {
@@ -16,7 +32,7 @@
     font-size: 2em;
     width: 30px;
     height: 30px;
-    padding: 1rem;
+    padding: $pad-y 1rem;
     border-radius: 50%;
     background-color: $red;
 }

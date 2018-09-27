@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PlayerList from './PlayerList';
 import IconButton from './IconButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Add extends Component {
     constructor(props) {
@@ -26,14 +27,17 @@ class Add extends Component {
 
     render() {
         let { players, tournament } = this.props;
+        let plusIcon = <FontAwesomeIcon icon="plus" />
         return (
             <section className="">
                 <IconButton target="/" icon="back" />
                 <PlayerList players={players} tournament={tournament}/>
-                <div>
+                <div className="form">
                     <label htmlFor="player-name">Player Name</label>
                     <input id="player-name" type="text" value={ this.state.inputValue } onChange={ (e) => this.handleChange(e) } />
-                    <button onClick={ this.handleClick } className="button" disabled={ this.state.inputValue ? false : true }>Add</button>
+                    <div className="button-container">
+                        <button onClick={ this.handleClick } className="highlight-button" disabled={ this.state.inputValue ? false : true }>Add { plusIcon }</button>
+                    </div>
                 </div>
             </section>
         )

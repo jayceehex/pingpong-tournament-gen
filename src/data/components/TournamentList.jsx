@@ -11,10 +11,12 @@ class TournamentList extends Component {
         let { players, tournament } = this.props;
         return (
             Object.values(tournament.currentBracket.matches).length ? 
-            <section className="bracketbox">
-                <h2 className="light-text">Matches</h2>
+            <section className="bracketbox light-text">
+                <h2>Matches</h2>
                 { tournament.currentBracket.byes.length ? (
-                <p className="light-text"><FontAwesomeIcon icon="info-circle" /> Because you entered an odd number of players, not everyone gets to play in this bracket.</p>
+                <aside className="infobox">
+                <p><FontAwesomeIcon icon="info-circle" className=""/> Because you entered an odd number of players, not everyone gets to play in this bracket.</p>
+                </aside>
                 ) : null }
                 { Object.values(tournament.currentBracket.matches).map(match => {
                     return (

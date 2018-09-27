@@ -21,8 +21,8 @@ class Home extends Component {
             <Fragment>
                 <TournamentList players={players} tournament={tournament}/>
                 <div className="button-container">
-                    <Link className="standard-button" to="/add">Add { plusIcon }</Link>
-                    <button className="highlight-button" onClick={ this.handleClick }>Generate { playIcon }</button>
+                    <Link className="standard-button" to="/add"><span>Add</span>{ plusIcon }</Link>
+                    <button className="highlight-button" onClick={ this.handleClick }><span>Generate</span>{ playIcon }</button>
                 </div>
             </Fragment>
         )
