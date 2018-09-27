@@ -1,5 +1,5 @@
 .highlight-button {
-    @extend .button;
+    @extend .rectangle-button;
     background-color: $red;
     color: $offwhite;
     &:disabled {

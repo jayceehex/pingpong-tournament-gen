@@ -3,11 +3,13 @@ body {
   background-color: #21618c;
   color: #fbfcfc; }
 
-.button, .standard-button, .highlight-button {
+.button, .rectangle-button, .standard-button, .highlight-button, .round-button, .icon-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
+  transition: all 0.1s ease-in-out; }
+
+.rectangle-button, .standard-button, .highlight-button {
   padding: 0.75rem 2rem;
   margin: 0 1rem;
   width: 100%;
@@ -16,25 +18,21 @@ body {
   text-decoration: none;
   text-align: center;
   line-height: 2rem; }
-  .button:first-child, .standard-button:first-child, .highlight-button:first-child {
+  .rectangle-button:first-child, .standard-button:first-child, .highlight-button:first-child {
     margin-left: 0; }
-  .button:last-child, .standard-button:last-child, .highlight-button:last-child {
+  .rectangle-button:last-child, .standard-button:last-child, .highlight-button:last-child {
     margin-right: 0; }
-  .button:only-child, .standard-button:only-child, .highlight-button:only-child {
+  .rectangle-button:only-child, .standard-button:only-child, .highlight-button:only-child {
     margin: 0; }
-  .button span, .standard-button span, .highlight-button span, .button svg, .standard-button svg, .highlight-button svg {
+  .rectangle-button span, .standard-button span, .highlight-button span, .rectangle-button svg, .standard-button svg, .highlight-button svg {
     margin: 0 0.75rem; }
 
-.round-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.round-button, .icon-button {
   font-size: 2em;
   width: 30px;
   height: 30px;
   padding: 1rem 1rem;
-  border-radius: 50%;
-  background-color: #ec4f3f; }
+  border-radius: 50%; }
 
 p {
   font-size: 1em; }
@@ -122,3 +120,17 @@ label {
   .highlight-button:disabled {
     background-color: #f17a6d;
     color: #dee6e6; }
+
+.icon-button {
+  background-color: #fbfcfc;
+  color: #1b2631; }
+  .icon-button svg {
+    color: #1b2631; }
+  .icon-button:disabled {
+    background-color: white; }
+    .icon-button:disabled svg {
+      color: #090d10; }
+  .icon-button:hover {
+    background-color: #ec4f3f; }
+    .icon-button:hover svg {
+      color: #fbfcfc; }

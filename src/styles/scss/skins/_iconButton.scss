@@ -1,0 +1,20 @@
+.icon-button {
+    @extend .round-button;
+    background-color: $offwhite;
+    color: $offblack;
+    svg {
+        color: $offblack;
+    }
+    &:disabled {
+        background-color: lighten($offwhite, 10%);
+        svg {
+            color: darken($offblack, 10%);
+        }
+    }
+    &:hover {
+        background-color: $red;
+        svg {
+            color: $offwhite;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from "react-router-dom";
+import GameActions from './GameActions';
 import TournamentList from './TournamentList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -20,10 +21,7 @@ class Home extends Component {
         return (
             <Fragment>
                 <TournamentList players={players} tournament={tournament}/>
-                <div className="button-container">
-                    <Link className="standard-button" to="/add"><span>Add</span>{ plusIcon }</Link>
-                    <button className="highlight-button" onClick={ this.handleClick }><span>Generate</span>{ playIcon }</button>
-                </div>
+                <GameActions onClick={ this.handleClick } />
             </Fragment>
         )
     }
