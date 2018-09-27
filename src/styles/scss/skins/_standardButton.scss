@@ -1,0 +1,5 @@
+.standard-button {
+    @extend .button;
+    background-color: $offwhite;
+    color: $offblack;
+}

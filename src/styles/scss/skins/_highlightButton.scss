@@ -1,0 +1,5 @@
+.highlight-button {
+    @extend .button;
+    background-color: $red;
+    color: $offwhite;
+}

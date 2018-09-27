@@ -1,3 +1,6 @@
 .matchbox {
-    margin: 0.5rem 0;
+    border-bottom: 1px $offwhite solid;
+    &:last-of-type {
+        border-bottom: none;
+    }
 }

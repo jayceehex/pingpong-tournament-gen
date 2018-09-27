@@ -2,16 +2,16 @@ import React from 'react';
 
 const PlayerList = ({ players, tournament }) => {
     return (
-        <div className="textbox offwhite-bg">
+        <div className="bracketbox light-text">
             { Object.values(players).length ? (
                 Object.values(players).map((player, i) => {
                 return (
-                    <p key={i}>
+                    <div key={i} className="playerbox lightblue-bg dark-text">
                         { player.name }
-                    </p>
+                    </div>
                 )
             })) : (
-                <p className="muted-text">No players yet. :(</p>
+                <p>No players yet. :(</p>
             ) }
         </div>
     )

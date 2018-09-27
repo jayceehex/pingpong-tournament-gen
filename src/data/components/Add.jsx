@@ -27,15 +27,15 @@ class Add extends Component {
     render() {
         let { players, tournament } = this.props;
         return (
-            <Fragment>
+            <section className="">
+                <IconButton target="/" icon="back" />
                 <PlayerList players={players} tournament={tournament}/>
                 <div>
                     <label htmlFor="player-name">Player Name</label>
                     <input id="player-name" type="text" value={ this.state.inputValue } onChange={ (e) => this.handleChange(e) } />
                     <button onClick={ this.handleClick } className="button" disabled={ this.state.inputValue ? false : true }>Add</button>
                 </div>
-                <IconButton target="/" icon="back" />
-            </Fragment>
+            </section>
         )
     }
 }

@@ -7,7 +7,7 @@ let forward = <FontAwesomeIcon icon="chevron-right" className="light-text" />
 
 const IconButton = ({target, icon}) => {
     return (
-        <Link to={target} className="round-button">{ icon }</Link>
+        <Link to={target} className="round-button">{ back }</Link>
     )
 }
 

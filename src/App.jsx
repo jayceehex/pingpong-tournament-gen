@@ -10,9 +10,16 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faChevronLeft)
 library.add(faChevronRight)
+library.add(faInfoCircle)
+library.add(faPlay)
+library.add(faPlus)
+
 
 class App extends Component {
   render() {
