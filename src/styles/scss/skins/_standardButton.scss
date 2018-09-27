@@ -1,9 +1,9 @@
 .standard-button {
     @extend .rectangle-button;
-    background-color: $offwhite;
-    color: $offblack;
+    background-color: $offblack;
+    color: $offwhite;
     &:disabled {
-        background-color: darken($offwhite, 10%);
-        color: lighten($offblack, 10%);
+        background-color: lighten($offblack, 10%);
+        color: darken($offwhite, 10%);
     }
 }

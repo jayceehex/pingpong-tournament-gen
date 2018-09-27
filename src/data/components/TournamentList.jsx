@@ -15,7 +15,12 @@ class TournamentList extends Component {
                 <h2>Matches</h2>
                 { tournament.currentBracket.byes.length ? (
                 <aside className="infobox">
-                <p><FontAwesomeIcon icon="info-circle" className=""/> Because you entered an odd number of players, not everyone gets to play in this bracket.</p>
+                <div className="icon-container">
+                    <FontAwesomeIcon icon="info-circle" className=""/>
+                </div>
+                <div className="text-container">
+                    <p>Because you entered an odd number of players, not everyone gets to play in this bracket.</p>
+                </div>
                 </aside>
                 ) : null }
                 { Object.values(tournament.currentBracket.matches).map(match => {

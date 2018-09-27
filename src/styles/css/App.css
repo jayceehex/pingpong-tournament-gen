@@ -80,6 +80,32 @@ label {
   display: flex;
   flex-direction: column; }
 
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center; }
+
+.site-title {
+  width: 100%;
+  align-self: center; }
+
+.infobox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #fbfcfc;
+  color: #1b2631; }
+  .infobox div {
+    padding: 0 0.5rem; }
+  .infobox div:first-child {
+    padding-left: 0; }
+  .infobox div:last-child {
+    padding-right: 0; }
+  .infobox .icon-container {
+    font-size: 2.5rem; }
+
 .light-text {
   color: #fbfcfc; }
 
@@ -108,11 +134,11 @@ label {
   background-color: #ec4f3f; }
 
 .standard-button {
-  background-color: #fbfcfc;
-  color: #1b2631; }
+  background-color: #1b2631;
+  color: #fbfcfc; }
   .standard-button:disabled {
-    background-color: #dee6e6;
-    color: #2d4052; }
+    background-color: #2d4052;
+    color: #dee6e6; }
 
 .highlight-button {
   background-color: #ec4f3f;
