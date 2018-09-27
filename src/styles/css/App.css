@@ -136,14 +136,14 @@ label {
 .standard-button {
   background-color: #1b2631;
   color: #fbfcfc; }
-  .standard-button:disabled {
+  .standard-button:disabled, .standard-button:hover {
     background-color: #2d4052;
     color: #dee6e6; }
 
 .highlight-button {
   background-color: #ec4f3f;
   color: #fbfcfc; }
-  .highlight-button:disabled {
+  .highlight-button:disabled, .highlight-button:hover {
     background-color: #f17a6d;
     color: #dee6e6; }
 
