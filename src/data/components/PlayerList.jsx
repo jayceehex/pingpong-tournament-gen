@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from 'react';
-import { Link } from "react-router-dom";
+import React from 'react';
 
 const PlayerList = ({ players, tournament }) => {
     return (
@@ -12,7 +11,7 @@ const PlayerList = ({ players, tournament }) => {
                     </p>
                 )
             })) : (
-                <p>No players yet. :(</p>
+                <p className="muted-text">No players yet. :(</p>
             ) }
         </div>
     )

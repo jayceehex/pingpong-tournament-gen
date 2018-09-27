@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const IconButton = ({target}) => {
+let back = <FontAwesomeIcon icon="chevron-left" className="light-text" />
+let forward = <FontAwesomeIcon icon="chevron-right" className="light-text" />
+
+const IconButton = ({target, icon}) => {
     return (
-        <Link to={target} className="button">Back</Link>
+        <Link to={target} className="round-button">{ icon }</Link>
     )
 }
 

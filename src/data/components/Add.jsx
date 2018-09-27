@@ -32,9 +32,9 @@ class Add extends Component {
                 <div>
                     <label htmlFor="player-name">Player Name</label>
                     <input id="player-name" type="text" value={ this.state.inputValue } onChange={ (e) => this.handleChange(e) } />
-                    <button onClick={ this.handleClick }>Add</button>
+                    <button onClick={ this.handleClick } className="button" disabled={ this.state.inputValue ? false : true }>Add</button>
                 </div>
-                <IconButton target="/" />
+                <IconButton target="/" icon="back" />
             </Fragment>
         )
     }

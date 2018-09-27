@@ -19,6 +19,9 @@ class TournamentList extends Component {
                         </div>
                     )
                 }) }
+                <div className="playerbox">
+                    <p>{ tournament.currentBracket.byes.length ? tournament.currentBracket.byes.map(playerId => players[tournament.currentBracket.byes].name) : null }</p>
+                </div>
             </div> : null
         )
     }
