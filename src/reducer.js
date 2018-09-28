@@ -139,8 +139,37 @@ const setTournamentStructure = state => {
     return newStateWithPlayerMatches;
 }
 
+const setMatchScores = (state, matchId, p1Score, p2Score) => {
+    // Create copy of state
+    let newState = {
+        ...state,
+        tournament: {
+            ...state.tournament,
+            currentBracket: {
+                ...state.tournament.currentBracket,
+                matches: {
+                    ...state.tournament.currentBracket.matches,
+                    [matchId]: {
+                        ...state.tournament.currentBracket.matches[matchId],
+                        player1: {
+                            ...state.tournament.currentBracket.matches[matchId].player1,
+                            score: p1Score
+                        },
+                        player2: {
+                            ...state.tournament.currentBracket.matches[matchId].player2,
+                            score: p2Score
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return newState;
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
+        case 'setScores': return setMatchScores(state, action.matchId, action.p1Score, action.p2Score);
         case 'setTournament': return setTournamentStructure(state);
         case 'setName': return setPlayerName(state, action.name);
         default: return state;

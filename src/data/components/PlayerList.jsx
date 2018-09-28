@@ -7,7 +7,7 @@ const PlayerList = ({ players, tournament }) => {
             { Object.values(players).length ? (
                 Object.values(players).map((player, i) => {
                 return (
-                    <div key={i} className="playerbox lightblue-bg dark-text">
+                    <div key={i} className="player">
                         { player.name }
                     </div>
                 )

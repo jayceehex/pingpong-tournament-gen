@@ -1,7 +1,13 @@
 .playerbox {
-    margin: $pad-y 0;
     padding: $pad-y 1rem;
+    margin: 0.5rem 0;
     p {
         margin: 0;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
     }
 }

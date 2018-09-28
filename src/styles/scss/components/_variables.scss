@@ -1,11 +1,19 @@
+// DESIGN VARIABLES
+// Colours
 $offwhite: rgb(251, 252, 252);
 $offblack: rgb(27, 38, 49);
 $darkblue: rgb(52, 73, 94);
 $midblue: rgb(33, 97, 140);
 $lightblue: rgb(52, 152, 219);
 $red: rgb(236, 79, 63);
-
+// Spacing
 $gutter: 30%;
 $pad-y: 1rem;
+// Fonts
+$header-font-stack: 'Audiowide', sans-serif;
 
-$header-font-stack: 'Gravitas One', sans-serif;
+// MEDIA QUERIES
+$break-tablet: 768px;
+$break-laptop-sm: 1200px;
+$break-laptop-lg: 1600px;
+$break-retina: 192dpi;

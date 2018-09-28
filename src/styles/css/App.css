@@ -1,5 +1,5 @@
 @import url(../../../node_modules/normalize.css/normalize.css);
-@import url("https://fonts.googleapis.com/css?family=Gravitas+One|Patua+One|Righteous");
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
 body {
   background-color: #21618c;
   color: #fbfcfc; }
@@ -8,9 +8,16 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.1s ease-in-out; }
+  transition: all 0.1s ease-in-out;
+  cursor: default; }
+  .button:hover, .rectangle-button:hover, .standard-button:hover, .highlight-button:hover, .round-button:hover, .icon-button:hover {
+    transform: scale(1.05); }
+  .button:disabled, .rectangle-button:disabled, .standard-button:disabled, .highlight-button:disabled, .round-button:disabled, .icon-button:disabled {
+    transform: none; }
 
 .rectangle-button, .standard-button, .highlight-button {
+  font-family: "Audiowide", sans-serif;
+  text-transform: uppercase;
   padding: 0.75rem 2rem;
   margin: 0 1rem;
   width: 100%;
@@ -49,16 +56,20 @@ p {
   display: flex;
   flex-direction: column; }
 
-.matchbox {
-  border-bottom: 1px #fbfcfc solid; }
-  .matchbox:last-of-type {
-    border-bottom: none; }
+.matchbox, .match {
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  transition: all 0.1s ease-in-out; }
 
-.playerbox {
-  margin: 1rem 0;
-  padding: 1rem 1rem; }
-  .playerbox p {
+.playerbox, .player {
+  padding: 1rem 1rem;
+  margin: 0.5rem 0; }
+  .playerbox p, .player p {
     margin: 0; }
+  .playerbox:first-child, .player:first-child {
+    margin-top: 0; }
+  .playerbox:last-child, .player:last-child {
+    margin-bottom: 0; }
 
 .container {
   margin: 0 30%; }
@@ -89,7 +100,8 @@ label {
 
 .site-title {
   width: 100%;
-  align-self: center; }
+  align-self: center;
+  font-size: 4rem; }
 
 .infobox {
   display: flex;
@@ -107,9 +119,10 @@ label {
   .infobox .icon-container {
     font-size: 2.5rem; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Gravitas One", sans-serif;
-  font-weight: 400; }
+h1, h2, h3, h4, h5, h6, label {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase; }
 
 .light-text {
   color: #fbfcfc; }
@@ -141,14 +154,14 @@ h1, h2, h3, h4, h5, h6 {
 .standard-button {
   background-color: #1b2631;
   color: #fbfcfc; }
-  .standard-button:disabled, .standard-button:hover {
+  .standard-button:disabled {
     background-color: #2d4052;
     color: #dee6e6; }
 
 .highlight-button {
   background-color: #ec4f3f;
   color: #fbfcfc; }
-  .highlight-button:disabled, .highlight-button:hover {
+  .highlight-button:disabled {
     background-color: #f17a6d;
     color: #dee6e6; }
 
@@ -165,3 +178,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ec4f3f; }
     .icon-button:hover svg {
       color: #fbfcfc; }
+
+.player {
+  background-color: #3498db;
+  color: #1b2631; }
+
+.match:hover {
+  transform: scale(1.02); }

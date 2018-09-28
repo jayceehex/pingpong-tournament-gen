@@ -4,10 +4,12 @@ export const setBracketResult = () => {
     }
 }
 
-export const setMatchResult = winner => {
+export const setScores = (id, scores) => {
     return {
-        type: 'setMatchResult',
-        winner: winner
+        type: 'setScores',
+        matchId: id,
+        p1Score: scores.p1ScoreInput,
+        p2Score: scores.p2ScoreInput,
     }
 }
 

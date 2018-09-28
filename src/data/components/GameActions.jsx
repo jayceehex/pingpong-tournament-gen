@@ -8,7 +8,7 @@ const GameActions = ({onClick}) => {
     return (
         <div className="button-container">
             <Link className="standard-button" to="/add"><span>Add Players</span>{ plusIcon }</Link>
-            <button className="highlight-button" onClick={ onClick }><span>Let's Play!</span>{ playIcon }</button>
+            <button className="highlight-button" onClick={ onClick }><span>Play</span>{ playIcon }</button>
         </div>
     )
 };

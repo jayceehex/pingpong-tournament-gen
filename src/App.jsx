@@ -5,7 +5,9 @@ import {
 } from "react-router-dom";
 import Add from './data/containers/Add';
 import Home from './data/containers/Home';
+import Match from './data/containers/Match';
 import Header from './data/components/Header';
+import FourOhFour from './data/components/FourOhFour';
 import TournamentList from './data/components/TournamentList';
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -31,6 +33,8 @@ class App extends Component {
           <Route exact path="/" component={ Home } />
           <Route exact path="/add" component={ Add } />
           <Route exact path="/play" component={ TournamentList } />
+          <Route exact path="/matches/:id" render={ ({ match }) => (<Match id={ match.params.id }/> )} />
+          <Route component={FourOhFour} />
         </Switch>
       </React.Fragment>
     );

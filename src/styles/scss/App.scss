@@ -1,5 +1,5 @@
 @import '../../../node_modules/normalize.css/normalize.css';
-@import url('https://fonts.googleapis.com/css?family=Gravitas+One');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
 @import './components/variables';
 @import './components/body';
 @import './components/button';
@@ -17,3 +17,6 @@
 @import './skins/standardButton';
 @import './skins/highlightButton';
 @import './skins/iconButton';
+@import './skins/player';
+@import './skins/match';
+

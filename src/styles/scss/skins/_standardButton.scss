@@ -2,7 +2,7 @@
     @extend .rectangle-button;
     background-color: $offblack;
     color: $offwhite;
-    &:disabled, &:hover {
+    &:disabled {
         background-color: lighten($offblack, 10%);
         color: darken($offwhite, 10%);
     }

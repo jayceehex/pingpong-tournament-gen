@@ -5,6 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class TournamentList extends Component {
     constructor(props) {
         super(props);
+        this.isWinner = this.isWinner.bind(this);
+    }
+
+    isWinner(matchId, playerNo) {
+        if (this.props.tournament.currentBracket.matches[matchId][playerNo].score >= 21) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     render() {
@@ -19,16 +28,18 @@ class TournamentList extends Component {
                     <FontAwesomeIcon icon="info-circle" className=""/>
                 </div>
                 <div className="text-container">
-                    <p>Because you entered an odd number of players, not everyone gets to play in this bracket.</p>
+                    <p>There's an odd number of players, so not everyone will play in this bracket.</p>
                 </div>
                 </aside>
                 ) : null }
                 { Object.values(tournament.currentBracket.matches).map(match => {
                     return (
-                        <div key={match.matchId} className="matchbox">
-                            <div className="playerbox lightblue-bg dark-text">{ players[match.player1.id].name }</div>
-                            <div className="playerbox lightblue-bg dark-text">{ players[match.player2.id].name }</div>
-                        </div>
+                        <Link to={"/matches/" + match.matchId} key={match.matchId} >
+                            <div id={"match-" + match.matchId} className="match">
+                                <div className={"player" + (this.isWinner(match.matchId, "player1") ? " winner" : "")}><p>{ players[match.player1.id].name }</p></div>
+                                <div className={"player" + (this.isWinner(match.matchId, "player2") ? " winner" : "")}><p>{ players[match.player2.id].name }</p></div>
+                            </div>
+                        </Link>
                     )
                 }) }
             </section> : null

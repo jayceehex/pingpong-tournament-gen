@@ -1,0 +1,6 @@
+.match {
+    @extend .matchbox;
+    &:hover {
+        transform: scale(1.02);
+    }
+}

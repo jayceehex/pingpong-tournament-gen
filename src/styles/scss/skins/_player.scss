@@ -1,0 +1,5 @@
+.player {
+    @extend .playerbox;
+    background-color: $lightblue;
+    color: $offblack;
+}
