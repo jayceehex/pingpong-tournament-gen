@@ -1,5 +1,4 @@
 .playerbox {
-    padding: $pad-y 1rem;
     margin: 0.5rem 0;
     p {
         margin: 0;
@@ -9,5 +8,21 @@
     }
     &:last-child {
         margin-bottom: 0;
+    }
+}
+
+.playerbox--head {
+    padding: $pad-y 1rem;
+}
+
+.playerbox--info {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: $pad-y 1rem;
+    margin-bottom: $pad-y;
+    input {
+        width: 2rem;
     }
 }

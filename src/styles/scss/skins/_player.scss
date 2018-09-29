@@ -1,5 +1,18 @@
-.player {
-    @extend .playerbox;
+.player--head {
+    @extend .playerbox--head;
     background-color: $lightblue;
     color: $offblack;
+}
+
+.player--info {
+    @extend .playerbox--info;
+    background-color: $darkblue;
+}
+
+.player--winner {
+    background-color: $offwhite;
+}
+
+.player--loser {
+    opacity: 0.33;
 }

@@ -82,11 +82,11 @@ const setPlayerMatches = state => {
                 matchId: idx + 1,
                 player1: {
                     id: shuffledPlayers.length ? shuffledPlayers.pop().playerId : null,
-                    score: null,
+                    score: 0,
                 },
                 player2: {
                     id: shuffledPlayers.length ? shuffledPlayers.pop().playerId : null,
-                    score: null,
+                    score: 0,
                 },
             }
         }

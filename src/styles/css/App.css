@@ -61,15 +61,27 @@ p {
   margin: 0.5rem 0;
   transition: all 0.1s ease-in-out; }
 
-.playerbox, .player {
-  padding: 1rem 1rem;
+.playerbox {
   margin: 0.5rem 0; }
-  .playerbox p, .player p {
+  .playerbox p {
     margin: 0; }
-  .playerbox:first-child, .player:first-child {
+  .playerbox:first-child {
     margin-top: 0; }
-  .playerbox:last-child, .player:last-child {
+  .playerbox:last-child {
     margin-bottom: 0; }
+
+.playerbox--head, .player--head {
+  padding: 1rem 1rem; }
+
+.playerbox--info, .player--info {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem; }
+  .playerbox--info input, .player--info input {
+    width: 2rem; }
 
 .container {
   margin: 0 30%; }
@@ -80,9 +92,8 @@ p {
   padding: 1rem 0; }
 
 input {
-  border: 0px; }
-  input[type=text] {
-    padding: 1rem 0.5rem; }
+  border: 0px;
+  padding: 1rem 0.5rem; }
 
 label {
   display: inline-block;
@@ -179,9 +190,18 @@ h1, h2, h3, h4, h5, h6, label {
     .icon-button:hover svg {
       color: #fbfcfc; }
 
-.player {
+.player--head {
   background-color: #3498db;
   color: #1b2631; }
+
+.player--info {
+  background-color: #34495e; }
+
+.player--winner {
+  background-color: #fbfcfc; }
+
+.player--loser {
+  opacity: 0.33; }
 
 .match:hover {
   transform: scale(1.02); }

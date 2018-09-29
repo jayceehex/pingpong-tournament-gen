@@ -10,9 +10,11 @@ class TournamentList extends Component {
 
     isWinner(matchId, playerNo) {
         if (this.props.tournament.currentBracket.matches[matchId][playerNo].score >= 21) {
-            return true;
+            return " player--winner";
+        } else if ((this.props.tournament.currentBracket.matches[matchId].player1.score < 21) && (this.props.tournament.currentBracket.matches[matchId].player2.score < 21)) {
+            return "";
         } else {
-            return false;
+            return " player--loser";
         }
     }
 
@@ -36,8 +38,12 @@ class TournamentList extends Component {
                     return (
                         <Link to={"/matches/" + match.matchId} key={match.matchId} >
                             <div id={"match-" + match.matchId} className="match">
-                                <div className={"player" + (this.isWinner(match.matchId, "player1") ? " winner" : "")}><p>{ players[match.player1.id].name }</p></div>
-                                <div className={"player" + (this.isWinner(match.matchId, "player2") ? " winner" : "")}><p>{ players[match.player2.id].name }</p></div>
+                                <div className="playerbox">
+                                    <div className={"player--head" + this.isWinner(match.matchId, "player1")}><p>{ players[match.player1.id].name }</p></div>
+                                </div>
+                                <div className="playerbox">
+                                    <div className={"player--head" + this.isWinner(match.matchId, "player2")}><p>{ players[match.player2.id].name }</p></div>
+                                </div>
                             </div>
                         </Link>
                     )
