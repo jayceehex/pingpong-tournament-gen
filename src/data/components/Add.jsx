@@ -38,7 +38,9 @@ class Add extends Component {
         return (
             <Fragment>
                 <main className="main-content">
+                    { Object.values(players).length ? (
                     <PlayerList players={players} tournament={tournament}/>
+                    ) : null }
                     <div className="form">
                         <label htmlFor="player-name">Player Name</label>
                         <input id="player-name" type="text" value={ this.state.inputValue } onChange={ (e) => this.handleChange(e) } />
