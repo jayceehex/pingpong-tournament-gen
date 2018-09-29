@@ -22,7 +22,7 @@ class Home extends Component {
         return (
             <main className="main-content">
                 <TournamentList players={players} tournament={tournament}/>
-                <GameActions onClick={ this.handleClick } />
+                <GameActions onClick={ this.handleClick } players={ players } currentBracket={ tournament.currentBracket } />
             </main>
         )
     }
