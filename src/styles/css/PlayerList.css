@@ -30,8 +30,14 @@
   grid-template-rows: 30vh auto auto; }
   @media only screen and (min-width: 768px) {
     .ubercontainer {
-      grid-template-columns: 15% 15% auto 15% 15%;
+      grid-template-columns: 10% 15% auto 15% 10%;
       grid-template-rows: 30vh auto auto auto; } }
+  @media only screen and (min-width: 1200px) {
+    .ubercontainer {
+      grid-template-columns: 17% 15% auto 15% 17%; } }
+  @media only screen and (min-width: 1600px) {
+    .ubercontainer {
+      grid-template-columns: 20% 15% auto 15% 20%; } }
 
 body {
   background-color: #21618c;

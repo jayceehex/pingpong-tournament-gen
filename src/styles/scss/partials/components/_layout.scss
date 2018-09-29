@@ -32,7 +32,13 @@
     grid-template-columns: $gutter-sm $sidebar auto $sidebar $gutter-sm;
     grid-template-rows: 30vh auto auto;
     @media only screen and (min-width: $break-tablet) {
-        grid-template-columns: $gutter-md $sidebar auto $sidebar $gutter-md;
+        grid-template-columns: $gutter-sm $sidebar auto $sidebar $gutter-sm;
         grid-template-rows: 30vh auto auto auto;
+    }
+    @media only screen and (min-width: $break-laptop-sm) {
+        grid-template-columns: $gutter-md $sidebar auto $sidebar $gutter-md;
+    }
+    @media only screen and (min-width: $break-laptop-lg) {
+        grid-template-columns: $gutter-lg $sidebar auto $sidebar $gutter-lg;
     }
 }
