@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import FourOhFour from './FourOhFour';
 import IconButton from './IconButton';
 import Button from './Button';
+import '../../styles/css/Match.css';
 
 class Match extends Component {
     constructor(props) {

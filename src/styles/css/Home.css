@@ -1,0 +1,58 @@
+@import url(../../../node_modules/normalize.css/normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
+.main-content {
+  grid-area: 2 / 2 / 3 / 5; }
+  @media only screen and (min-width: 768px) {
+    .main-content {
+      grid-area: 2 / 3 / 3 / 4; } }
+
+.sidebar-1 {
+  grid-area: 3 / 3 / 4 / 4; }
+  @media only screen and (min-width: 768px) {
+    .sidebar-1 {
+      grid-area: 2 / 2 / 3 / 3; } }
+
+.sidebar-2 {
+  grid-area: 2 / 4 / 3 / 5; }
+  @media only screen and (min-width: 768px) {
+    .sidebar-2 {
+      grid-area: 2 / 2 / 3 / 3; } }
+
+.header {
+  grid-area: 1 / 1 / 2 / 6; }
+
+.footer {
+  grid-area: 3 / 1 / 4 / 6; }
+
+.ubercontainer {
+  display: grid;
+  grid-template-columns: 10% 15% auto 15% 10%;
+  grid-template-rows: 30vh auto auto; }
+  @media only screen and (min-width: 768px) {
+    .ubercontainer {
+      grid-template-columns: 15% 15% auto 15% 15%;
+      grid-template-rows: 30vh auto auto auto; } }
+
+body {
+  background-color: #21618c;
+  color: #fbfcfc; }
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6, label {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.light-text {
+  color: #fbfcfc; }
+
+.dark-text {
+  color: #1b2631; }
+
+.muted-text {
+  color: #34495e; }
+
+p {
+  font-size: 1em; }

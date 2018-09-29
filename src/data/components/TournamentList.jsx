@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../../styles/css/TournamentList.css';
 
 class TournamentList extends Component {
     constructor(props) {
@@ -23,13 +24,13 @@ class TournamentList extends Component {
         return (
             Object.values(tournament.currentBracket.matches).length ? 
             <section className="bracketbox light-text">
-                <h2>Matches</h2>
+                <h2>Bracket {tournament.currentBracket.bracketId}</h2>
                 { tournament.currentBracket.byes.length ? (
                 <aside className="infobox">
-                <div className="icon-container">
+                <div className="infobox--icon-container">
                     <FontAwesomeIcon icon="info-circle" className=""/>
                 </div>
-                <div className="text-container">
+                <div className="infobox--text-container">
                     <p>There's an odd number of players, so not everyone will play in this bracket.</p>
                 </div>
                 </aside>

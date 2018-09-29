@@ -3,6 +3,7 @@ import PlayerList from './PlayerList';
 import IconButton from './IconButton';
 import Button from './Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../../styles/css/Add.css';
 
 class Add extends Component {
     constructor(props) {

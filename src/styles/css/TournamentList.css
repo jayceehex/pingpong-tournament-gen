@@ -37,44 +37,8 @@ body {
   background-color: #21618c;
   color: #fbfcfc; }
 
-.button, .rectangle-button, .standard-button, .highlight-button, .round-button, .icon-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.1s ease-in-out;
-  cursor: default; }
-
-.rectangle-button, .standard-button, .highlight-button {
-  font-family: "Audiowide", sans-serif;
-  text-transform: uppercase;
-  padding: 0.75rem 2rem;
-  margin: 0 1rem;
-  width: 100%;
-  border: 0px;
-  font-size: 1em;
-  text-decoration: none;
-  text-align: center;
-  line-height: 2rem; }
-  .rectangle-button:first-child, .standard-button:first-child, .highlight-button:first-child {
-    margin-left: 0; }
-  .rectangle-button:last-child, .standard-button:last-child, .highlight-button:last-child {
-    margin-right: 0; }
-  .rectangle-button:only-child, .standard-button:only-child, .highlight-button:only-child {
-    margin: 0; }
-  .rectangle-button span, .standard-button span, .highlight-button span, .rectangle-button svg, .standard-button svg, .highlight-button svg {
-    margin: 0 0.75rem; }
-  .rectangle-button:hover, .standard-button:hover, .highlight-button:hover {
-    transform: scale(1.05); }
-  .rectangle-button:disabled, .standard-button:disabled, .highlight-button:disabled {
-    transform: none; }
-
-.round-button, .icon-button {
-  margin: 1rem;
-  font-size: 2em;
-  width: 30px;
-  height: 30px;
-  padding: 1rem 1rem;
-  border-radius: 50%; }
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
 
 h1, h2, h3, h4, h5, h6, label {
   font-family: "Audiowide", sans-serif;
@@ -93,10 +57,44 @@ h1, h2, h3, h4, h5, h6, label {
 p {
   font-size: 1em; }
 
-.textbox {
-  margin: 0.5rem 1rem;
-  padding: 1.5rem;
-  text-align: center; }
+.button, .rectangle-button, .round-button, .icon-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  cursor: default; }
+
+.rectangle-button {
+  font-family: "Audiowide", sans-serif;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  margin: 0 1rem;
+  width: 100%;
+  border: 0px;
+  font-size: 1em;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2rem; }
+  .rectangle-button:first-child {
+    margin-left: 0; }
+  .rectangle-button:last-child {
+    margin-right: 0; }
+  .rectangle-button:only-child {
+    margin: 0; }
+  .rectangle-button span, .rectangle-button svg {
+    margin: 0 0.75rem; }
+  .rectangle-button:hover {
+    transform: scale(1.05); }
+  .rectangle-button:disabled {
+    transform: none; }
+
+.round-button, .icon-button {
+  margin: 1rem;
+  font-size: 2em;
+  width: 30px;
+  height: 30px;
+  padding: 1rem 1rem;
+  border-radius: 50%; }
 
 .bracketbox {
   margin: 0;
@@ -142,29 +140,6 @@ p {
   justify-content: center;
   align-items: center; }
 
-input {
-  border: 0px;
-  padding: 1rem 0.5rem; }
-
-label {
-  display: inline-block;
-  padding: 1rem 0; }
-
-.form {
-  display: flex;
-  flex-direction: column; }
-
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  text-align: center; }
-
-.site-title {
-  width: 100%;
-  align-self: center;
-  font-size: 4rem; }
-
 .infobox {
   display: flex;
   justify-content: space-between;
@@ -178,40 +153,8 @@ label {
     padding-left: 0; }
   .infobox div:last-child {
     padding-right: 0; }
-  .infobox .icon-container {
+  .infobox .infobox--icon-container {
     font-size: 2.5rem; }
-
-.midblue-bg {
-  background-color: #21618c; }
-
-.darkblue-bg {
-  background-color: #34495e; }
-
-.lightblue-bg {
-  background-color: #3498db; }
-
-.offwhite-bg {
-  background-color: #fbfcfc; }
-
-.offblack-bg {
-  background-color: #1b2631; }
-
-.red-bg {
-  background-color: #ec4f3f; }
-
-.standard-button {
-  background-color: #1b2631;
-  color: #fbfcfc; }
-  .standard-button:disabled {
-    background-color: #2d4052;
-    color: #dee6e6; }
-
-.highlight-button {
-  background-color: #ec4f3f;
-  color: #fbfcfc; }
-  .highlight-button:disabled {
-    background-color: #f17a6d;
-    color: #dee6e6; }
 
 .icon-button {
   background-color: #fbfcfc;

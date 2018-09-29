@@ -1,0 +1,111 @@
+@import url(../../../node_modules/normalize.css/normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
+.main-content {
+  grid-area: 2 / 2 / 3 / 5; }
+  @media only screen and (min-width: 768px) {
+    .main-content {
+      grid-area: 2 / 3 / 3 / 4; } }
+
+.sidebar-1 {
+  grid-area: 3 / 3 / 4 / 4; }
+  @media only screen and (min-width: 768px) {
+    .sidebar-1 {
+      grid-area: 2 / 2 / 3 / 3; } }
+
+.sidebar-2 {
+  grid-area: 2 / 4 / 3 / 5; }
+  @media only screen and (min-width: 768px) {
+    .sidebar-2 {
+      grid-area: 2 / 2 / 3 / 3; } }
+
+.header {
+  grid-area: 1 / 1 / 2 / 6; }
+
+.footer {
+  grid-area: 3 / 1 / 4 / 6; }
+
+.ubercontainer {
+  display: grid;
+  grid-template-columns: 10% 15% auto 15% 10%;
+  grid-template-rows: 30vh auto auto; }
+  @media only screen and (min-width: 768px) {
+    .ubercontainer {
+      grid-template-columns: 15% 15% auto 15% 15%;
+      grid-template-rows: 30vh auto auto auto; } }
+
+body {
+  background-color: #21618c;
+  color: #fbfcfc; }
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6, label {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.light-text {
+  color: #fbfcfc; }
+
+.dark-text {
+  color: #1b2631; }
+
+.muted-text {
+  color: #34495e; }
+
+p {
+  font-size: 1em; }
+
+.button, .rectangle-button, .highlight-button, .standard-button, .round-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  cursor: default; }
+
+.rectangle-button, .highlight-button, .standard-button {
+  font-family: "Audiowide", sans-serif;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  margin: 0 1rem;
+  width: 100%;
+  border: 0px;
+  font-size: 1em;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2rem; }
+  .rectangle-button:first-child, .highlight-button:first-child, .standard-button:first-child {
+    margin-left: 0; }
+  .rectangle-button:last-child, .highlight-button:last-child, .standard-button:last-child {
+    margin-right: 0; }
+  .rectangle-button:only-child, .highlight-button:only-child, .standard-button:only-child {
+    margin: 0; }
+  .rectangle-button span, .highlight-button span, .standard-button span, .rectangle-button svg, .highlight-button svg, .standard-button svg {
+    margin: 0 0.75rem; }
+  .rectangle-button:hover, .highlight-button:hover, .standard-button:hover {
+    transform: scale(1.05); }
+  .rectangle-button:disabled, .highlight-button:disabled, .standard-button:disabled {
+    transform: none; }
+
+.round-button {
+  margin: 1rem;
+  font-size: 2em;
+  width: 30px;
+  height: 30px;
+  padding: 1rem 1rem;
+  border-radius: 50%; }
+
+.highlight-button {
+  background-color: #ec4f3f;
+  color: #fbfcfc; }
+  .highlight-button:disabled {
+    background-color: #f17a6d;
+    color: #dee6e6; }
+
+.standard-button {
+  background-color: #1b2631;
+  color: #fbfcfc; }
+  .standard-button:disabled {
+    background-color: #2d4052;
+    color: #dee6e6; }

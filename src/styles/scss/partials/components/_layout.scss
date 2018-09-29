@@ -1,0 +1,38 @@
+.main-content {
+    grid-area: 2 / 2 / 3 / 5;
+    @media only screen and (min-width: $break-tablet) {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+}
+
+.sidebar-1 {
+    grid-area: 3 / 3 / 4 / 4;
+    @media only screen and (min-width: $break-tablet) {
+        grid-area: 2 / 2 / 3 / 3;        
+    }
+}
+
+.sidebar-2 {
+    grid-area: 2 / 4 / 3 / 5;
+    @media only screen and (min-width: $break-tablet) {
+        grid-area: 2 / 2 / 3 / 3;        
+    }
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 6;
+}
+
+.footer {
+    grid-area: 3 / 1 / 4 / 6;
+}
+
+.ubercontainer {
+    display: grid;
+    grid-template-columns: $gutter-sm $sidebar auto $sidebar $gutter-sm;
+    grid-template-rows: 30vh auto auto;
+    @media only screen and (min-width: $break-tablet) {
+        grid-template-columns: $gutter-md $sidebar auto $sidebar $gutter-md;
+        grid-template-rows: 30vh auto auto auto;
+    }
+}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import GameActions from './GameActions';
 import TournamentList from './TournamentList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../../styles/css/Home.css';
 
 class Home extends Component {
     constructor(props) {

@@ -9,7 +9,6 @@ import {
     Route,
   } from "react-router-dom";
 import store from './store';
-import './styles/css/App.css';
 
 ReactDOM.render(
     <Provider store={store}>

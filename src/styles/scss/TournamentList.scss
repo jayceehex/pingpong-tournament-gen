@@ -1,0 +1,18 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+@import './partials/components/variables';
+@import './partials/components/layout';
+@import './partials/components/body';
+@import './partials/components/typography';
+
+@import './partials/components/button';
+@import './partials/components/bracketbox';
+@import './partials/components/matchbox';
+@import './partials/components/playerbox';
+@import './partials/components/buttonContainer';
+@import './partials/components/infobox';
+
+@import './partials/skins/iconButton';
+@import './partials/skins/player';
+@import './partials/skins/match';

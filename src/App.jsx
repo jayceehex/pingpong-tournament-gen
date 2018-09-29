@@ -10,7 +10,6 @@ import Header from './data/components/Header';
 import FourOhFour from './data/components/FourOhFour';
 import TournamentList from './data/components/TournamentList';
 import { library } from '@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'

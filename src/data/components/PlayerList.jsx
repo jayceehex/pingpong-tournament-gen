@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/css/PlayerList.css';
 
 const PlayerList = ({ players, tournament }) => {
     return (

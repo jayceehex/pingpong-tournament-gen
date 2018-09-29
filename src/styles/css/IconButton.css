@@ -1,0 +1,73 @@
+@import url(../../../node_modules/normalize.css/normalize.css);
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6, label {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.light-text {
+  color: #fbfcfc; }
+
+.dark-text {
+  color: #1b2631; }
+
+.muted-text {
+  color: #34495e; }
+
+p {
+  font-size: 1em; }
+
+.button, .rectangle-button, .round-button, .icon-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  cursor: default; }
+
+.rectangle-button {
+  font-family: "Audiowide", sans-serif;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  margin: 0 1rem;
+  width: 100%;
+  border: 0px;
+  font-size: 1em;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2rem; }
+  .rectangle-button:first-child {
+    margin-left: 0; }
+  .rectangle-button:last-child {
+    margin-right: 0; }
+  .rectangle-button:only-child {
+    margin: 0; }
+  .rectangle-button span, .rectangle-button svg {
+    margin: 0 0.75rem; }
+  .rectangle-button:hover {
+    transform: scale(1.05); }
+  .rectangle-button:disabled {
+    transform: none; }
+
+.round-button, .icon-button {
+  margin: 1rem;
+  font-size: 2em;
+  width: 30px;
+  height: 30px;
+  padding: 1rem 1rem;
+  border-radius: 50%; }
+
+.icon-button {
+  background-color: #fbfcfc;
+  color: #1b2631; }
+  .icon-button svg {
+    color: #1b2631; }
+  .icon-button:disabled {
+    background-color: white; }
+    .icon-button:disabled svg {
+      color: #090d10; }
+  .icon-button:hover {
+    background-color: #1b2631; }
+    .icon-button:hover svg {
+      color: #fbfcfc; }

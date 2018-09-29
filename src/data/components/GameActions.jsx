@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Button from './Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../../styles/css/GameActions.css';
 
 const GameActions = ({onClick}) => {
     let playIcon = <FontAwesomeIcon icon="play" />
