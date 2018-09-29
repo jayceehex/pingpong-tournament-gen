@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const FourOhFour = () => {
     return (
-        <main>
+        <main className="main-content">
             <h2>Oops!</h2>
             <p>The page you're trying to get to doesn't exist.</p>
             <div className="button-container">

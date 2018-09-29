@@ -39,36 +39,38 @@ class Match extends Component {
     render() {
         let { matchId, matches, players, currentBracket } = this.props;
         return (
-            <Fragment>
-                {
-                    matches[matchId] !== undefined ? (
-                        <Fragment>
-                        <IconButton target="/" icon="back" />
-                        <section id="player1" className="playerbox">
-                            <div className="player--head">
-                                <p>{ players[matches[matchId].player1.id].name }</p>
-                            </div>
-                            <div className="player--info">
-                                <label htmlFor="p1-score">Score</label>
-                                <input id="p1-score" type="number" onChange={(e) => this.onChange(e)} value={this.state.p1ScoreInput} min="0" max="100" />
+                matches[matchId] !== undefined ? (
+                    <Fragment>
+                        <section className="main-content">
+                            <section id="player1" className="playerbox">
+                                <div className="player--head">
+                                    <p>{ players[matches[matchId].player1.id].name }</p>
+                                </div>
+                                <div className="player--info">
+                                    <label htmlFor="p1-score">Score</label>
+                                    <input id="p1-score" type="number" onChange={(e) => this.onChange(e)} value={this.state.p1ScoreInput} min="0" max="100" />
+                                </div>
+                            </section>
+                            <section id="player2" className="playerbox">
+                                <div className="player--head">
+                                    <p>{ players[matches[matchId].player2.id].name }</p>
+                                </div>
+                                <div className="player--info">
+                                    <label htmlFor="p2-score">Score</label>
+                                    <input id="p2-score" type="number" onChange={(e) => this.onChange(e)} value={this.state.p2ScoreInput} min="0" max="100" />
+                                </div>
+                            </section>
+                            <div className="button-container">
+                                <Button id="save-scores-button" onClick={this.onClick} isDisabled={this.state.modified ? false : true} type="highlight">Save Scores</Button>
                             </div>
                         </section>
-                        <section id="player2" className="playerbox">
-                            <div className="player--head">
-                                <p>{ players[matches[matchId].player2.id].name }</p>
+                        <aside className="sidebar-1">
+                            <div className="icon-button-container">
+                                <IconButton target="/" icon="back" />
                             </div>
-                            <div className="player--info">
-                                <label htmlFor="p2-score">Score</label>
-                                <input id="p2-score" type="number" onChange={(e) => this.onChange(e)} value={this.state.p2ScoreInput} min="0" max="100" />
-                            </div>
-                        </section>
-                        <div className="button-container">
-                            <Button id="save-scores-button" onClick={this.onClick} isDisabled={this.state.modified ? false : true} type="highlight">Save Scores</Button>
-                        </div>
-                        </Fragment>
-                    ) : <FourOhFour />
-                }
-            </Fragment>
+                        </aside>
+                    </Fragment>
+                ) : <FourOhFour />
         )
     }
 }

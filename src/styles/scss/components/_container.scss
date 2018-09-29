@@ -7,3 +7,10 @@
     justify-content: space-between;
     padding: $pad-y 0;
 }
+
+.icon-button-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}

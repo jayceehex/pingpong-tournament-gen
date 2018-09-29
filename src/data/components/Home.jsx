@@ -19,10 +19,10 @@ class Home extends Component {
         let playIcon = <FontAwesomeIcon icon="play" />
         let plusIcon = <FontAwesomeIcon icon="plus" />
         return (
-            <Fragment>
+            <main className="main-content">
                 <TournamentList players={players} tournament={tournament}/>
                 <GameActions onClick={ this.handleClick } />
-            </Fragment>
+            </main>
         )
     }
 }

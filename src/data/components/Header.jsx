@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <header className="site-header">
+        <header className="header site-header">
             <h1 className="site-title">Tournament Generator</h1>
         </header>
     )

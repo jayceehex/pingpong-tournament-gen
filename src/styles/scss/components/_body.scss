@@ -2,3 +2,29 @@ body {
     background-color: $midblue;
     color: $offwhite;
 }
+
+.main-content {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.sidebar-1 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.sidebar-2 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 6;
+}
+
+.footer {
+    grid-area: 3 / 1 / 4 / 6;
+}
+
+.ubercontainer {
+    display: grid;
+    grid-template-columns: $gutter $sidebar auto $sidebar $gutter;
+    grid-template-rows: 30vh auto auto;
+}
