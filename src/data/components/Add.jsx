@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import PlayerList from './PlayerList';
 import IconButton from './IconButton';
+import Button from './Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Add extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            modified: false,
             inputValue: ""
         }
         this.handleClick = this.handleClick.bind(this);
@@ -15,12 +17,16 @@ class Add extends Component {
 
     handleClick() {
         this.props.onClick(this.state.inputValue);
-        this.setState({inputValue: ""});
+        this.setState({
+            modified: false,
+            inputValue: ""
+        });
     }
 
     handleChange(e) {
         e.preventDefault();
         this.setState({
+            modified: true,
             inputValue: e.target.value,
         })
     }
@@ -36,7 +42,7 @@ class Add extends Component {
                     <label htmlFor="player-name">Player Name</label>
                     <input id="player-name" type="text" value={ this.state.inputValue } onChange={ (e) => this.handleChange(e) } />
                     <div className="button-container">
-                        <button onClick={ this.handleClick } className="highlight-button" disabled={ this.state.inputValue ? false : true }>Add { plusIcon }</button>
+                        <Button id="add-players-button" onClick={this.handleClick} isDisabled={this.state.modified ? false : true} type="highlight">Add { plusIcon }</Button>
                     </div>
                 </div>
             </section>

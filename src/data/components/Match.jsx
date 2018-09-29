@@ -1,30 +1,31 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from "react-router-dom";
 import FourOhFour from './FourOhFour';
 import IconButton from './IconButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Button from './Button';
 
 class Match extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            modified: false,
             p1ScoreInput: Object.values(this.props.currentBracket.matches).length ? this.props.currentBracket.matches[this.props.matchId].player1.score : 0,
             p2ScoreInput: Object.values(this.props.currentBracket.matches).length ? this.props.currentBracket.matches[this.props.matchId].player2.score : 0,
         }
         this.onChange = this.onChange.bind(this);
         this.onClick = this.onClick.bind(this);
-        this.isDisabled = this.isDisabled.bind(this);
     }
 
     onChange(e) {
         switch(e.target.id) {
             case 'p1-score':
                 this.setState({
+                    modified: true,
                     p1ScoreInput: e.target.value
                 })
                 break;
             default:
                 this.setState({
+                    modified: true,
                     p2ScoreInput: e.target.value
                 })
         }
@@ -32,22 +33,7 @@ class Match extends Component {
 
     onClick() {
         this.props.onClick(this.props.matchId, this.state)
-    }
-
-    isDisabled() {
-        let localScores = {
-            p1Score: this.state.p1ScoreInput,
-            p2Score: this.state.p2ScoreInput
-        }
-        let globalScores = {
-            p1Score: this.props.currentBracket.matches[this.props.matchId].player1.score,
-            p2Score: this.props.currentBracket.matches[this.props.matchId].player2.score
-        }
-        if (JSON.stringify(localScores) === JSON.stringify(globalScores)) {
-            return true;
-        } else {
-            return false;
-        }
+        this.setState({modified: false})
     }
 
     render() {
@@ -64,20 +50,20 @@ class Match extends Component {
                             </div>
                             <div className="player--info">
                                 <label htmlFor="p1-score">Score</label>
-                                <input id="p1-score" type="number" onChange={(e) => this.onChange(e)} value={this.state.p1ScoreInput} />
+                                <input id="p1-score" type="number" onChange={(e) => this.onChange(e)} value={this.state.p1ScoreInput} min="0" max="100" />
                             </div>
                         </section>
                         <section id="player2" className="playerbox">
                             <div className="player--head">
-                                <p>{ players[matches[matchId].player1.id].name }</p>
+                                <p>{ players[matches[matchId].player2.id].name }</p>
                             </div>
                             <div className="player--info">
                                 <label htmlFor="p2-score">Score</label>
-                                <input id="p2-score" type="number" onChange={(e) => this.onChange(e)} value={this.state.p2ScoreInput} />
+                                <input id="p2-score" type="number" onChange={(e) => this.onChange(e)} value={this.state.p2ScoreInput} min="0" max="100" />
                             </div>
                         </section>
                         <div className="button-container">
-                            <button id="save-scores-button" onClick={this.onClick} disabled={this.isDisabled()} className="highlight-button">Save Scores</button>
+                            <Button id="save-scores-button" onClick={this.onClick} isDisabled={this.state.modified ? false : true} type="highlight">Save Scores</Button>
                         </div>
                         </Fragment>
                     ) : <FourOhFour />

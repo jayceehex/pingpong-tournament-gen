@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Button from './Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const GameActions = ({onClick}) => {
@@ -8,7 +9,7 @@ const GameActions = ({onClick}) => {
     return (
         <div className="button-container">
             <Link className="standard-button" to="/add"><span>Add Players</span>{ plusIcon }</Link>
-            <button className="highlight-button" onClick={ onClick }><span>Play</span>{ playIcon }</button>
+            <Button id="start-tournament-button" onClick={onClick} isDisabled={false} type="highlight"><span>Play</span>{ playIcon }</Button>
         </div>
     )
 };
