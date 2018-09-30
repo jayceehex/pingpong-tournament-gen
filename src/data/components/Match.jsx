@@ -38,7 +38,7 @@ class Match extends Component {
     }
 
     render() {
-        let { matchId, matches, players, currentBracket } = this.props;
+        let { matchId, matches, players } = this.props;
         return (
                 matches[matchId] !== undefined ? (
                     <Fragment>

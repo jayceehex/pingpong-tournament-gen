@@ -1,13 +1,3 @@
-function createReducer(initialState, handlers) {
-    return function reducer(state = initialState, action) {
-      if (handlers.hasOwnProperty(action.type)) {
-        return handlers[action.type](state, action)
-      } else {
-        return state
-      }
-    }
-}
-
 const setPlayerName = (state, name) => {
     // Create copy of state and add player
     let newState = {
