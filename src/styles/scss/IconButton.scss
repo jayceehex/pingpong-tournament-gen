@@ -1,8 +1,11 @@
-@import '../../../node_modules/normalize.css/normalize.css';
+// External imports
+@import '../../../node_modules/normalize.scss/normalize.scss';
 
+// Base imports
 @import './partials/components/variables';
 @import './partials/components/typography';
 
+// Component-specific imports
 @import './partials/components/button';
 
 @import './partials/skins/iconButton';

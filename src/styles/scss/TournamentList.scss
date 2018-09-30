@@ -1,11 +1,14 @@
-@import '../../../node_modules/normalize.css/normalize.css';
+// External imports
+@import '../../../node_modules/normalize.scss/normalize.scss';
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 
+// Base imports
 @import './partials/components/variables';
 @import './partials/components/layout';
 @import './partials/components/body';
 @import './partials/components/typography';
 
+// Component-specific imports
 @import './partials/components/button';
 @import './partials/components/bracketbox';
 @import './partials/components/matchbox';

@@ -37,7 +37,7 @@ class TournamentList extends Component {
                 ) : null }
                 { Object.values(tournament.currentBracket.matches).map(match => {
                     return (
-                        <Link to={"/matches/" + match.matchId} key={match.matchId} >
+                        <Link to={"/matches/" + match.matchId} key={match.matchId} style={{ textDecoration: 'none' }} >
                             <div id={"match-" + match.matchId} className="match">
                                 <div className="playerbox">
                                     <div className={"player--head" + this.isWinner(match.matchId, "player1")}><p>{ players[match.player1.id].name }</p></div>
