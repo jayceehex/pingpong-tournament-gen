@@ -429,10 +429,7 @@ p {
 .playerbox {
   margin: 0.5rem 0; }
   .playerbox p {
-    margin: 0;
-    text-decoration: none !important; }
-  .playerbox a {
-    text-decoration-line: none; }
+    margin: 0; }
   .playerbox:first-child {
     margin-top: 0; }
   .playerbox:last-child {

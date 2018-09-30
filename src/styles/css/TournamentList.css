@@ -456,7 +456,7 @@ p {
   font-size: 2em;
   width: 30px;
   height: 30px;
-  padding: 1rem 1rem;
+  padding: 1rem 1.1rem 1rem 0.9rem;
   border-radius: 50%; }
 
 .bracketbox {
@@ -473,10 +473,7 @@ p {
 .playerbox {
   margin: 0.5rem 0; }
   .playerbox p {
-    margin: 0;
-    text-decoration: none !important; }
-  .playerbox a {
-    text-decoration-line: none; }
+    margin: 0; }
   .playerbox:first-child {
     margin-top: 0; }
   .playerbox:last-child {
