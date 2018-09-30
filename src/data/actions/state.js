@@ -25,3 +25,9 @@ export const setTournament = () => {
         type: 'setTournament'
     }
 }
+
+export const resetTournament = () => {
+    return {
+        type: 'resetTournament'
+    }
+}

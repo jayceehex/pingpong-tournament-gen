@@ -19,6 +19,13 @@ const setPlayerName = (state, name) => {
                 name: name,
                 wins: 0
             }
+        },
+        tournament: {
+            ...state.tournament,
+            currentBracket: {
+                ...state.tournament.currentBracket,
+                bracketId: 0,
+            }
         }
     };
     // Return the new state
@@ -167,8 +174,28 @@ const setMatchScores = (state, matchId, p1Score, p2Score) => {
     return newState;
 }
 
+const resetTournamentAndPlayers = state => {
+    let newState = {
+        players: {},
+        tournament: {
+            noOfPlaces: 1,
+            noOfBrackets: 0,
+            currentBracket: {
+                bracketId: 0,
+                playerIds: [],
+                noOfMatches: 0,
+                matches: {},
+                byes: {}
+            },
+            pastBrackets: {}
+        }
+    }
+    return newState;
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
+        case 'resetTournament': return resetTournamentAndPlayers(state);
         case 'setScores': return setMatchScores(state, action.matchId, action.p1Score, action.p2Score);
         case 'setTournament': return setTournamentStructure(state);
         case 'setName': return setPlayerName(state, action.name);

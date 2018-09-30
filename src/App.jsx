@@ -15,12 +15,14 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faSyncAlt } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faChevronLeft)
 library.add(faChevronRight)
 library.add(faInfoCircle)
 library.add(faPlay)
 library.add(faPlus)
+library.add(faSyncAlt)
 
 
 class App extends Component {

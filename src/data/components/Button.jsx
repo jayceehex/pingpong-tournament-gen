@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import '../../styles/css/Button.css';
 
 const Button = ({id, type, isDisabled, onClick, children}) => {
