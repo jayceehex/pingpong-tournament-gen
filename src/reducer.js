@@ -105,11 +105,6 @@ const setPlayerMatches = state => {
     return newState;
 }
 
-// const bracketReducer = createReducer([], {
-//     'calculatePlayers': setPlayersInBracket,
-//     'calculateMatches': setMatches
-// })
-
 const setTournamentStructure = state => {
     // Create copy of state, setting bracket to 1
     let newState = {
